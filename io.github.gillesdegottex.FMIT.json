@@ -11,7 +11,8 @@
     "finish-args" : [
         "--share=ipc",
         "--socket=x11",
-        "--socket=pulseaudio"
+        "--socket=pulseaudio",
+        "--device=all"
     ],
     "modules" : [
         {
@@ -38,12 +39,36 @@
             ]
         },
         {
+            "name" : "jack2",
+            "buildsystem" : "simple",
+            "build-commands" : [
+                "python3 waf configure --prefix=/app --htmldir=/app/share/doc/jack/ --freebob=no --classic",
+                "python3 waf build",
+                "python3 waf install"
+            ],
+            "cleanup" : [
+            	"/bin",
+            	"/include",
+            	"/share",
+            	"/lib/jack",
+            	"/lib/libjackserver.so*",
+            	"/lib/pkgconfig"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://github.com/jackaudio/jack2/archive/v1.9.12.tar.gz",
+                    "sha512" : "f0271dfc8f8e2f2489ca52f431ad4fa420665816d6c67a01a76da1d4b5ae91f6dad8c4e3309ec5e0c159c9d312ed56021ab323d74bce828ace26f1b8d477ddfa"
+                }
+            ]
+        },
+        {
             "name" : "fmit",
             "buildsystem" : "qmake",
             "config-opts" : [
                 "PREFIXSHORTCUT=/app",
                 "FFT_LIBDIR=/app",
-                "CONFIG+=acs_alsa"
+                "CONFIG+=acs_alsa acs_jack"
             ],
             "sources" : [
                 {
