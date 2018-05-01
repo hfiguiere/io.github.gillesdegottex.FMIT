@@ -74,7 +74,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/gillesdegottex/fmit.git",
-                    "commit" : "23fb92aafb82f36356c9497880cf9633976253bb"
+                    "commit" : "a24fd037f1a1ef5917658b893562640d9ce8cdc4"
                 },
                 {
                     "type" : "shell",
