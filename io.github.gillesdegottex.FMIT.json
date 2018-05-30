@@ -70,7 +70,8 @@
             "config-opts" : [
                 "PREFIXSHORTCUT=/app",
                 "FFT_LIBDIR=/app",
-                "CONFIG+=acs_alsa acs_jack"
+                "CONFIG+=acs_alsa",
+                "CONFIG+=acs_jack"
             ],
             "sources" : [
                 {
