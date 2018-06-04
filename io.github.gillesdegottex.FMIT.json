@@ -68,8 +68,8 @@
             "name" : "fmit",
             "buildsystem" : "qmake",
             "config-opts" : [
-                "PREFIXSHORTCUT=/app",
-                "FFT_LIBDIR=/app",
+                "INCLUDEPATH+=/app/include",
+                "LIBS+=-L/app/lib",
                 "CONFIG+=acs_alsa",
                 "CONFIG+=acs_jack"
             ],
