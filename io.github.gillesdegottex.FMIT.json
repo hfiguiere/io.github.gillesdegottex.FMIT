@@ -11,7 +11,9 @@
     "finish-args" : [
         "--share=ipc",
         "--socket=x11",
+        /* acs_alsa support */
         "--socket=pulseaudio",
+        /* acs_jack support */
         "--device=all"
     ],
     "modules" : [
@@ -66,21 +68,24 @@
             "name" : "fmit",
             "buildsystem" : "qmake",
             "config-opts" : [
-                "PREFIXSHORTCUT=/app",
-                "FFT_LIBDIR=/app",
-                "CONFIG+=acs_alsa acs_jack"
+                "INCLUDEPATH+=/app/include",
+                "LIBS+=-L/app/lib",
+                "CONFIG+=acs_alsa",
+                "CONFIG+=acs_jack"
             ],
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://github.com/gillesdegottex/fmit.git",
-                    "commit" : "a24fd037f1a1ef5917658b893562640d9ce8cdc4"
+                    "commit" : "16d74785214f905ec9384c1ac4b1d68fdb0c2a45"
                 },
                 {
+                    /* acs_qt does not work on Linux */
                     "type" : "shell",
                     "commands" : [ "sed -i -e 's/CONFIG += acs_qt//g' fmit.pro" ]
                 },
                 {
+                    /* must be done before calling qmake, or translations will not be installed (?) */
                     "type" : "shell",
                     "commands" : [ "lrelease fmit.pro" ]
                 }
