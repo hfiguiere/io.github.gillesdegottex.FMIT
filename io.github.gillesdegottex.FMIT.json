@@ -77,7 +77,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/gillesdegottex/fmit.git",
-                    "commit" : "16d74785214f905ec9384c1ac4b1d68fdb0c2a45"
+                    "commit" : "a534274df19ab21aadef7780a430faf039df275b"
                 },
                 {
                     /* acs_qt does not work on Linux */
