@@ -35,8 +35,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "http://www.fftw.org/fftw-3.3.7.tar.gz",
-                    "sha1": "2ae980a8d44c161ce4a09c6e2d1c79243ecbabb2"
+                    "url" : "http://www.fftw.org/fftw-3.3.8.tar.gz",
+                    "md5": "8aac833c943d8e90d51b697b27d4384d"
                 }
             ]
         },
@@ -77,7 +77,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/gillesdegottex/fmit.git",
-                    "commit" : "a534274df19ab21aadef7780a430faf039df275b"
+                    "commit" : "1fc7f826026cad246c5e2e7ce796098ee686441d"
                 },
                 {
                     /* acs_qt does not work on Linux */
