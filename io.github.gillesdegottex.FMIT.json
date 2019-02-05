@@ -50,7 +50,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/gillesdegottex/fmit.git",
-                    "commit" : "1fc7f826026cad246c5e2e7ce796098ee686441d"
+                    "commit" : "7320d38fc9f35a76383ba14d83d18a0f0abf9de5"
                 },
                 {
                     /* acs_qt does not work on Linux */
