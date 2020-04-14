@@ -11,6 +11,8 @@
     "finish-args" : [
         "--share=ipc",
         "--socket=x11",
+        "--socket=wayland",
+        "--device=dri",
         /* acs_alsa support */
         "--socket=pulseaudio",
         /* On SuSE it seems to be necessary for sound to work */
