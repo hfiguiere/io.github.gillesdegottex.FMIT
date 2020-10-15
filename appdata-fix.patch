@@ -2,16 +2,17 @@ diff --git a/distrib/fmit.appdata.xml.in b/distrib/fmit.appdata.xml.in
 index 5038ca8..b3f0bd0 100644
 --- a/distrib/fmit.appdata.xml.in
 +++ b/distrib/fmit.appdata.xml.in
-@@ -110,7 +110,7 @@
+@@ -110,7 +110,9 @@
      <content_attribute id="money-gambling">none</content_attribute>
    </content_rating>
    <releases>
--    <release version="1.2.6" date="2018-05-30">
-+    <release version="1.2.13" date="2019-09-10">
++    <release version="1.2.14" date="2020-07-26"/>
++    <release version="1.2.13" date="2019-09-10"/>
+     <release version="1.2.6" date="2018-05-30">
        <description>
          <ul>
            <li>New note names: Hindustani, Byzantine</li>
-@@ -118,11 +118,12 @@
+@@ -118,11 +118,11 @@
            <li>Use custom save settings and pause icons that better fits the other icons design</li>
            <li>Flexible transposition key selection.</li>
            <li>Added symbolic icon for high-contrast setup.</li>
@@ -21,7 +22,6 @@ index 5038ca8..b3f0bd0 100644
          </ul>
        </description>
      </release>
-+    <release version="1.2.6" date="2018-05-30" />
      <release version="1.1.18" date="2018-05-09">
        <description>
          <ul>

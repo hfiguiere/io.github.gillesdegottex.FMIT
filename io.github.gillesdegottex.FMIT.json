@@ -3,7 +3,7 @@
     "branch" : "stable",
     "runtime" : "org.kde.Platform",
     "sdk" : "org.kde.Sdk",
-    "runtime-version" : "5.14",
+    "runtime-version" : "5.15",
     "command" : "fmit",
     "rename-icon" : "fmit",
     "rename-desktop-file" : "fmit.desktop",
@@ -32,8 +32,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/gillesdegottex/fmit.git",
-                    "tag": "v1.2.13",
-                    "commit" : "b2b6a9e699ea217a8aa6b02046e264909cfc396c"
+                    "tag": "v1.2.14",
+                    "commit" : "b717c3562477996d92ee7cd030a9dc1309ac2aff"
                 },
                 {
                     "type": "patch",
