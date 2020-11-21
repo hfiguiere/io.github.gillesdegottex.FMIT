@@ -1,0 +1,104 @@
+diff --git a/fmit.pro b/fmit.pro
+index b9dd73a..431c97d 100644
+--- a/fmit.pro
++++ b/fmit.pro
+@@ -121,7 +121,7 @@ unix {
+         INCLUDEPATH += $$FFT_LIBDIR/include
+         LIBS += -L$$FFT_LIBDIR/lib
+     }
+-    LIBS += -lfftw3
++    LIBS += -lfftw3 -lGL
+     # LIBS += -lfftw3f
+ }
+ 
+diff --git a/src/modules/GLErrorHistory.cpp b/src/modules/GLErrorHistory.cpp
+index b6162c4..61810ac 100644
+--- a/src/modules/GLErrorHistory.cpp
++++ b/src/modules/GLErrorHistory.cpp
+@@ -29,6 +29,8 @@ using namespace std;
+ #include <QPainter>
+ #include <Music/Music.h>
+ 
++#include <GL/gl.h>
++
+ void GLErrorHistory::Note::init()
+ {
+ 	min_err = numeric_limits<float>::max();
+diff --git a/src/modules/GLFT.cpp b/src/modules/GLFT.cpp
+index 985bd56..2ed38ea 100644
+--- a/src/modules/GLFT.cpp
++++ b/src/modules/GLFT.cpp
+@@ -34,6 +34,8 @@ using namespace Music;
+ #include <CppAddons/CAMath.h>
+ using namespace Math;
+ 
++#include <GL/gl.h>
++
+ GLFT::GLFT(QWidget* parent)
+ : QOpenGLWidget(parent)
+ , View(tr("Fourier Transform"), this)
+diff --git a/src/modules/GLFreqStruct.cpp b/src/modules/GLFreqStruct.cpp
+index 1a1cc50..e4d5b3b 100644
+--- a/src/modules/GLFreqStruct.cpp
++++ b/src/modules/GLFreqStruct.cpp
+@@ -28,6 +28,8 @@ using namespace std;
+ #include <Music/Music.h>
+ using namespace Music;
+ 
++#include <GL/gl.h>
++
+ GLFreqStruct::GLFreqStruct(QWidget* parent)
+ : QOpenGLWidget(parent)
+ , View(tr("Harmonics"), this)
+diff --git a/src/modules/GLGraph.cpp b/src/modules/GLGraph.cpp
+index 35ded54..8220032 100644
+--- a/src/modules/GLGraph.cpp
++++ b/src/modules/GLGraph.cpp
+@@ -29,6 +29,8 @@ using namespace std;
+ #include <Music/Music.h>
+ using namespace Music;
+ 
++#include <GL/gl.h>
++
+ GLGraph::GLGraph(QWidget* parent)
+ : QOpenGLWidget(parent)
+ , View(tr("Captured Sound"), this)
+diff --git a/src/modules/GLSample.cpp b/src/modules/GLSample.cpp
+index 5ee0e9b..5b11c2a 100644
+--- a/src/modules/GLSample.cpp
++++ b/src/modules/GLSample.cpp
+@@ -29,6 +29,8 @@ using namespace std;
+ #include <qwidgetaction.h>
+ #include <QPainter>
+ 
++#include <GL/gl.h>
++
+ GLSample::GLSample(QWidget* parent)
+ : QOpenGLWidget(parent)
+ , View(tr("Waveform"), this)
+diff --git a/src/modules/GLStatistics.cpp b/src/modules/GLStatistics.cpp
+index 294c826..dea7167 100644
+--- a/src/modules/GLStatistics.cpp
++++ b/src/modules/GLStatistics.cpp
+@@ -29,6 +29,8 @@ using namespace std;
+ #include <QPainter>
+ #include <Music/Music.h>
+ 
++#include <GL/gl.h>
++
+ void GLStatistics::AverageNote::init()
+ {
+ 	err_mean = 0.0;
+diff --git a/src/modules/GLVolumeHistory.cpp b/src/modules/GLVolumeHistory.cpp
+index da3a703..c38be95 100644
+--- a/src/modules/GLVolumeHistory.cpp
++++ b/src/modules/GLVolumeHistory.cpp
+@@ -25,6 +25,8 @@ using namespace std;
+ #include <QPainter>
+ #include <Music/Music.h>
+ 
++#include <GL/gl.h>
++
+ GLVolumeHistory::Note::Note(int h)
+ : ht(h)
+ {

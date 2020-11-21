@@ -40,6 +40,10 @@
                     "path": "appdata-fix.patch"
                 },
                 {
+                    "type": "patch",
+                    "path": "fmit-gl.patch"
+                },
+                {
                     /* acs_qt does not work on Linux */
                     "type" : "shell",
                     "commands" : [ "sed -i -e 's/CONFIG += acs_qt//g' fmit.pro" ]
